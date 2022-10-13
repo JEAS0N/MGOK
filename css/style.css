@@ -15,10 +15,12 @@ html{
 }
 
 header{
+    background-color:#597E9D;
+}
+.header__wrapper{
     display: flex;
     height: 70px;
-    width: 100%;
-    background-color:#597E9D;
+    max-width: 1900px;
 }
 .header__logo{
     margin-top: 12px;
