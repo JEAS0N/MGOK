@@ -35,10 +35,14 @@ const cardBlock = document.querySelector (`.content__conteiner_cards`);
     </div>`
   });
 
-const drop = document.querySelector(".popover__content");
+const drop = document.querySelector(`.popover__content`);
   const  popoverOpen = () => {
-    drop.classList.add("popover__content_show");
-  }
+    drop.classList.toggle(`popover__content_show`);
+  };
   const  popoverClose = () => {
-    drop.classList.remove("popover__content_show");
-  }
+    drop.classList.remove(`popover__content_show`);
+  };
+const burger = document.querySelector(`.header__burgermenu`);
+  const burgerOpen = () =>{
+    burger.classList.toggle(`header__burgermenu_open`);
+  };
