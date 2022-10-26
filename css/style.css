@@ -32,7 +32,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 40px;
+    gap: 33px;
     white-space: nowrap;
 }
 .header__menu_link{
@@ -48,7 +48,10 @@ header{
     margin: auto;
 }
 .header__icons_link{
-    padding-right: 33px;
+    display: flex;
+}
+.header__icons_popover{
+    cursor: pointer;
 }
 .popover__content{
     display: none;
@@ -56,23 +59,27 @@ header{
 .header__burger-menu{
     display: none;
 }
-
 .popover__content_show {
     position: absolute;
+    right: 2%;
     display:flex;
-    background-color:#F7F8FC ;
+    background-color:#eef0f1;
     flex-direction: column;
     text-align: center;
-    border: 2px solid #484C51;
 }
-.popover__content_show a{
+.popover__content_item{
     font-family: 'Calibri';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 22px;
     color: #484c51cc;
-    border: 1px solid #484C51;
+    padding: 5px;
+}
+.popover__content_item:hover{
+    color: #0e0f0fcc;
+    background-color:#d1d1d1;
+    transition: 1s;
 }
 
 main{
@@ -81,10 +88,9 @@ main{
 }
 .about-us-wrapper{
     max-width: 1200px;
-    margin: 50px auto 150px auto;
+    margin: 50px auto 0px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 .adout-us__header{
@@ -107,16 +113,17 @@ main{
     max-width: 930px;
 }
 .content{
-    margin-bottom: 50px;
     background: #597E9D;
     border-radius: 10px;
+    margin-top: 150px;
 }
 .content-wrapper{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0px 20px;
 }
 .content__header{
-    margin: 50px auto;
+    margin: 50px auto 0px auto;
     text-align: center;
     width: 61%;
 }
@@ -131,14 +138,16 @@ main{
 .content__conteiner_cards{
     display: flex;
     flex-wrap: wrap;
-    margin: 0px auto 100px auto;
+    margin: 25px 0px 100px 0px;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 80px;
 }
 .content__card{
     display: flex;
     flex-direction: column;
     height: 320px;
     width: 320px;
-    margin: 25px auto;
     background: #FFFFFF;
     box-shadow: 10px 10px 50px rgba(229, 233, 246, 0.1);
     border-radius: 10px;
@@ -180,8 +189,9 @@ main{
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-top: 50px;
     align-items: center;
+    padding: 0px 20px;
 }
 
 .info__slash{
@@ -214,6 +224,7 @@ main{
 }
 .help{
     background: #e7edecbd; 
+    margin-top: 50px;
 }
 .help-wrapper{
     max-width: 1200px;
@@ -221,6 +232,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
 }
 .help__header{
     font-family: 'Intro-Bold';
@@ -348,6 +360,11 @@ main{
     color: #FFFFFF;
     margin: auto;
 }
+.help__form_button input:hover{
+    background: #1a6685;
+    box-shadow: 0px 6px 10px #24fca64d;
+    cursor: pointer;
+}
 footer{
   background-color:#597E9D;  
 }
@@ -365,7 +382,6 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
     gap: 75px;
 }
 .footer__menu_link{
@@ -399,6 +415,7 @@ footer{
     .help-wrapper{
         max-width: 970px;
     }
+
  }
  @media screen and (max-width: 992px) {
     .header__wrapper{
@@ -407,45 +424,69 @@ footer{
         flex-direction: column;
         align-items: center;
     }
+    .wrapper{
+        padding: 0px 20px;
+    }
+    .popover__content{
+      right: auto;
+    }
     .help-wrapper{
         max-width: 750px;
     }
     .content__conteiner_cards{
         flex-wrap: wrap;
-        margin: auto;
     }
     .header__menu{
         display: none;
     } 
     .header__burger-menu{
+      z-index: 5;
       position: absolute;
       display: flex;
       flex-direction: column;
       margin: auto 0px auto 90%;
+      width: 200px;
     }
     .header__burgermenu{
-      display: none;
+      position: relative;
+      right: -100%;
+      transform: translate(1px);
+      transition: right 1s;
     }
     .header__burgermenu_list{
       display: flex;
       gap: 15px;
       flex-direction: column;
       background-color: #484C51;
-      width: 200px;
     }
     .header__burgermenu_open{
       display: flex;
       flex-direction: column;
+      position: relative;
+      right: 10%;
     }
     .header__burger-menu input{
       font-size: 40px;
       color: #FFFFFF;
+      cursor: pointer;
     }
 
  }
  @media screen and (max-width:767px) {
     .header__wrapper{
         max-width: none;
+    }
+    .info-wrapper{
+        max-width: none;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .info__block{
+        padding: 10px 0px;
+    }
+    .info__slash{
+       width: 80%;
+       height: 1px;
     }
     .help-wrapper{
         max-width: none;
@@ -464,17 +505,17 @@ footer{
     }
     .help__form_bottom-input{
         flex-direction: column;
-        margin: 0 auto;
+        width: 100%;
     }
     .help__form_name{
-        width: auto;
+        width: 100%;
     }
     .help__form_tel{
-        width: auto;
-        margin: 10px auto;
+        width: 100%;
     }
     .help__form_email{
-        width: auto;
+        width: 100%;
+        margin-top: 50px;
     }
     .help__form_agree{
        margin: auto;
