@@ -61,7 +61,6 @@ header{
 }
 .popover__content_show {
     position: absolute;
-    right: 2%;
     display:flex;
     background-color:#eef0f1;
     flex-direction: column;
@@ -414,6 +413,9 @@ footer{
     }
     .help-wrapper{
         max-width: 970px;
+    }
+    .popover__content{
+      right: 2%;
     }
 
  }
