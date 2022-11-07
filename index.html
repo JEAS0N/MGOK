@@ -1,204 +1,210 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset='utf-8'>
   <title>MGOK</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>	
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
   <link type="image/x-icon" href="image/logo.ico" rel="shortcut icon">
   <link type="Image/x-icon" href="image/logo.ico" rel="icon">
-  
+
 </head>
+
 <body>
   <header>
     <div class="header__wrapper">
       <div class="header__logo">
         <a href="#"><img src="image/logo.svg"></a>
       </div>
-      
+
       <div class="header__burger-menu">
-        <input type = "button" value="☰" onclick="burgerOpen()"> 
-        <nav class="header__menu"> 
-          <ul class="header__menu_list">
-            <li>
-              <a href="#" class="header__menu_link">Обучение</a>
-            </li>
-            <li>
-              <a href="#" class="header__menu_link">Вакансии</a>
-            </li>
-            <li>
-              <a href="#" class="header__menu_link">Резюме</a>
-            </li>
-            <li>
-              <a href="#" class="header__menu_link">Заявка</a>
-            </li>
-            <li>
-              <a href="#" class="header__menu_link">О нас</a>
-            </li>
-          </ul>  
-        </nav> 	
-      </div>
+        <input type="button" value="☰" id="burger_button">
+        <nav class="header__menu">
+          <div class="header__options">
+            <ul class="header__menu_list">
+              <li>
+                <a href="#" class="header__menu_link">Обучение</a>
+              </li>
+              <li>
+                <a href="#" class="header__menu_link">Вакансии</a>
+              </li>
+              <li>
+                <a href="#" class="header__menu_link">Резюме</a>
+              </li>
+              <li>
+                <a href="#" class="header__menu_link">Заявка</a>
+              </li>
+              <li>
+                <a href="#" class="header__menu_link">О нас</a>
+              </li>
+            </ul>
+          </div>
 
-      <div class="header__icons">
-        <ul class="header__menu_list">
-          <li>
-            <a href="#" class="header__icons_link">
-              <img src="image/header/message.svg">
-            </a>
-          </li>
-          <li>
-            <a href="#" class="header__icons_link">
-              <img src="image/header/favorite.svg">
-            </a>
-          </li> 
-          <li class="header__icons_popover" onclick="popoverOpen()">
-            <img src="image/header/profile.svg">
-            <div class="popover__content">
-              <a href="#" class="popover__content_item">Мой профиль</a>
-              <a href="#" class="popover__content_item">Настройка</a>
-              <a href="#" class="popover__content_item">Выйти</a>
-            </div> 
-          </li>   
-        </ul>
+          <div class="header__icons">
+            <ul class="header__menu_list">
+              <li>
+                <a href="#" class="header__icons_link">
+                  <img src="image/header/message.svg">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header__icons_link">
+                  <img src="image/header/favorite.svg">
+                </a>
+              </li>
+              <li class="header__icons_popover" onclick="popoverOpen()">
+                <img src="image/header/profile.svg">
+                <div class="popover__content">
+                  <a href="#" class="popover__content_item">Мой профиль</a>
+                  <a href="#" class="popover__content_item">Настройка</a>
+                  <a href="#" class="popover__content_item">Выйти</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-
     </div>
   </header>
-    
-    <main>
-      <section class="about-us-wrapper">
-        <div class="wrapper">
-          <div class="adout-us__header">
-            <span>О нас</span>
-          </div>
 
-          <div class="about-us__text">
-            <p>Государственное бюджетное профессиональное образовательное учреждение города Москвы</p>
-            <p>«Московский государственный образовательный комплекс» (до 01.06.2015 Техникум технологий и права)</p>
-            <br>
-            <p>Является образовательным комплексом, предоставляющим непрерывное практико-ориентированное образование с 1 класса школы по 4 курс техникума.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="content">
-        <div class="content-wrapper">
-          <div class="content__header">
-            <span>Мы предлагаем вам лучший выбор. Настройте его в соответствии с потребностями ваших 
-              желаний и убедитесь, что вы проходите обучение у наших высококвалифицированных 
-              компаний.</span>
-          </div>
-
-          <div class="content__conteiner_cards">
-
-          </div>
+  <main>
+    <section class="about-us-wrapper">
+      <div class="wrapper">
+        <div class="adout-us__header">
+          <span>О нас</span>
         </div>
 
-      </section>
+        <div class="about-us__text">
+          <p>Государственное бюджетное профессиональное образовательное учреждение города Москвы</p>
+          <p>«Московский государственный образовательный комплекс» (до 01.06.2015 Техникум технологий и права)</p>
+          <br>
+          <p>Является образовательным комплексом, предоставляющим непрерывное практико-ориентированное образование с 1
+            класса школы по 4 курс техникума.</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="info">
-
-        <div class="info-wrapper">
-          <div class="info__block">
-            <span class="info__header">1337</span>
-            <span class="info__text">Вакансий</span>
-          </div>
-
-          <div class="info__slash"></div>
-
-          <div class="info__block">
-            <span class="info__header">880</span>
-            <span class="info__text">Поисков работы</span>
-          </div>
-
-          <div class="info__slash"></div>
-
-          <div class="info__block">
-            <span class="info__header">228</span>
-            <span class="info__text">Программ обучения</span>
-          </div>
+    <section class="content">
+      <div class="content-wrapper">
+        <div class="content__header">
+          <span>Мы предлагаем вам лучший выбор. Настройте его в соответствии с потребностями ваших
+            желаний и убедитесь, что вы проходите обучение у наших высококвалифицированных
+            компаний.</span>
         </div>
 
-      </section>
+        <div class="content__conteiner_cards">
 
-      <section class="help">
+        </div>
+      </div>
 
-        <div class="help-wrapper">
-          <div class="help__header">
-            <span>Поможем в выборе!</span>
+    </section>
+
+    <section class="info">
+
+      <div class="info-wrapper">
+        <div class="info__block">
+          <span class="info__header">1337</span>
+          <span class="info__text">Вакансий</span>
+        </div>
+
+        <div class="info__slash"></div>
+
+        <div class="info__block">
+          <span class="info__header">880</span>
+          <span class="info__text">Поисков работы</span>
+        </div>
+
+        <div class="info__slash"></div>
+
+        <div class="info__block">
+          <span class="info__header">228</span>
+          <span class="info__text">Программ обучения</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="help">
+
+      <div class="help-wrapper">
+        <div class="help__header">
+          <span>Поможем в выборе!</span>
+        </div>
+
+        <div class="help__text">
+          <span>Если у вас есть вопросы о формате или вы не знаете что выбрать, оставьте свой номер: мы
+            позвоним, чтобы ответить на все ваши вопросы.</span>
+        </div>
+
+        <form class="help__form">
+
+          <div class="help__form_name">
+            <input type="text" class="help__form_data" id="name">
+            <label for="name">Имя</label>
           </div>
 
-          <div class="help__text">
-            <span>Если у вас есть вопросы о формате или вы не знаете что выбрать, оставьте свой номер: мы 
-              позвоним, чтобы ответить на все ваши вопросы.</span>
-          </div>
+          <div class="help__form_bottom-input">
 
-          <form class="help__form">
-
-            <div class="help__form_name"> 
-              <input type="text" class="help__form_data" id="name">
-              <label for="name">Имя</label>
+            <div class="help__form_tel">
+              <input type="tel" class="help__form_data" id="tel">
+              <label for="tel">Телефон</label>
             </div>
 
-            <div class="help__form_bottom-input">
-
-              <div class="help__form_tel">
-                <input type="tel" class="help__form_data" id="tel">
-                <label for="tel">Телефон</label>
-              </div>  
-
-              <div class="help__form_email">
-                <input type="email" class="help__form_data" id="email">
-                <label for="email">Почта</label>
-              </div>
-
+            <div class="help__form_email">
+              <input type="email" class="help__form_data" id="email">
+              <label for="email">Почта</label>
             </div>
 
-            <div class="help__form_bottom">
-              <div class="help__form_agree">
-                <label><input type="checkbox"><span>Я согласен с условиями обработки <a href="#">персональных данных</a></span></label>
-              </div>
+          </div>
+
+          <div class="help__form_bottom">
+            <div class="help__form_agree">
+              <label><input type="checkbox"><span>Я согласен с условиями обработки <a href="#">персональных
+                    данных</a></span></label>
+            </div>
 
             <div class="help__form_button">
               <input type="submit" value="Отправить">
             </div>
 
-            </div>
+          </div>
 
-          </form>
-        </div>
-      </section>
-    </main>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-  <div class="footer-wrapper">
-    <div class="footer__logo">
-      <img src="image/logo.svg">
-    </div>
+    <div class="footer-wrapper">
+      <div class="footer__logo">
+        <img src="image/logo.svg">
+      </div>
 
-    <div class="footer__menu"> 
-      <ul>
-        <li><a href="#" class="footer__menu_link">Обучение</a></li>
-        <li><a href="#" class="footer__menu_link">Вакансии</a></li>
-        <li><a href="#" class="footer__menu_link">Резюме</a></li>
-        <li><a href="#" class="footer__menu_link">Заявка</a></li>
+      <div class="footer__menu">
+        <ul>
+          <li><a href="#" class="footer__menu_link">Обучение</a></li>
+          <li><a href="#" class="footer__menu_link">Вакансии</a></li>
+          <li><a href="#" class="footer__menu_link">Резюме</a></li>
+          <li><a href="#" class="footer__menu_link">Заявка</a></li>
           <li><a href="#" class="footer__menu_link">О нас</a></li>
-        </ul>  
-      </div> 
+        </ul>
+      </div>
 
       <div class="footer__social">
         <a href="#"><img src="image/footer/phone.svg" alt="Позвонить"></a>
         <a href="#"><img src="image/footer/insta.svg" alt="Instagram"></a>
         <a href="#"><img src="image/footer/facebook.svg" alt="Facebook"></a>
         <a href="#"><img src="image/footer/youtube.svg" alt="YouTube"></a>
-      </div>	
+      </div>
 
-      <div class="footer__copyright"> 
+      <div class="footer__copyright">
         <span>Copyright © 2021. МГОК. All rights reserved.</span>
       </div>
     </div>
   </footer>
   <script src="js/main.js"></script>
 </body>
+
 </html>
